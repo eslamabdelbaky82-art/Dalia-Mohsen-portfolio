@@ -1,0 +1,226 @@
+/* Custom Clean White, Soft Gray & Subtle Orange Theme for Dalia Mohsen Portfolio */
+:root {
+    --bg-main: #ffffff;               /* Pure Crisp White */
+    --bg-section: #f4f6f8;            /* Soft Light Gray Section */
+    --bg-card: #ffffff;               /* Clean White Card */
+    --bg-dark-chip: #eef1f5;          /* Soft Cool Gray Chip/Input */
+    --border-gray: #e2e8f0;           /* Subtle Light Gray Border */
+    --text-main: #1e293b;             /* Deep Slate Charcoal for Readability */
+    --text-gray-light: #64748b;       /* Balanced Muted Gray Text */
+    --orange-primary: #f97316;        /* Warm Soft-Vibrant Orange */
+    --orange-hover: #ea580c;          /* Slightly Deeper Orange Hover */
+    --orange-soft-bg: rgba(249, 115, 22, 0.08);   /* Very Light Subtle Orange Tint */
+    --orange-soft-border: rgba(249, 115, 22, 0.22);
+    --orange-glow: rgba(249, 115, 22, 0.07);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+/* Custom White, Gray & Subtle Orange Utilities */
+.bg-gray-section {
+    background-color: var(--bg-section);
+}
+
+.bg-gray-card {
+    background-color: var(--bg-card) !important;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.bg-gray-dark {
+    background-color: var(--bg-dark-chip) !important;
+}
+
+.border-gray {
+    border-color: var(--border-gray) !important;
+}
+
+.text-gray-light {
+    color: var(--text-gray-light) !important;
+}
+
+.text-orange {
+    color: var(--orange-primary) !important;
+}
+
+.bg-orange {
+    background-color: var(--orange-primary) !important;
+}
+
+.bg-orange-subtle {
+    background-color: var(--orange-soft-bg) !important;
+}
+
+.border-orange-subtle {
+    border-color: var(--orange-soft-border) !important;
+}
+
+.text-orange-gradient {
+    background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn-orange {
+    background-color: var(--orange-primary);
+    border-color: var(--orange-primary);
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: var(--orange-hover);
+    border-color: var(--orange-hover);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(249, 115, 22, 0.22);
+}
+
+.btn-outline-gray {
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gray:hover {
+    border-color: var(--orange-primary);
+    background-color: var(--orange-soft-bg);
+    color: var(--orange-hover);
+}
+
+/* Navbar */
+.navbar-glass {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.nav-link {
+    color: #475569 !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--orange-primary) !important;
+}
+
+/* Hero Section & Cover Image */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 105px;
+    padding-bottom: 60px;
+    background: radial-gradient(circle at 50% 22%, var(--orange-glow) 0%, #f8fafc 55%, #ffffff 100%);
+}
+
+.hero-cover-wrapper {
+    max-width: 760px;
+    border-radius: 1.25rem;
+    padding: 6px;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.28), rgba(203, 213, 225, 0.65));
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.hero-cover-img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Icons & Cards */
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(249, 115, 22, 0.45) !important;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.project-img-container {
+    position: relative;
+    height: 210px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #f1f5f9;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.img-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 41, 59, 0.65);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-img-container:hover .img-overlay {
+    opacity: 1;
+}
+
+.timeline-item {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+    border-color: rgba(249, 115, 22, 0.45) !important;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* Form Controls */
+input.form-control, textarea.form-control {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #1e293b;
+}
+
+input.form-control::placeholder, textarea.form-control::placeholder {
+    color: #94a3b8;
+}
+
+input.form-control:focus, textarea.form-control:focus {
+    background-color: #ffffff;
+    border-color: var(--orange-primary);
+    color: #1e293b;
+    box-shadow: 0 0 0 0.25rem rgba(249, 115, 22, 0.15);
+}
